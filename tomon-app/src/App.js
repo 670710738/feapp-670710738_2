@@ -6,6 +6,7 @@ import Movie from './pages/Movie';
 import About from './pages/About';
 import MovieDetail from './pages/MovieDetail';
 import NotFound from './pages/NotFound';
+import MovieCard from './components/MovieCard';
 
 function App() {
   return (
@@ -13,12 +14,14 @@ function App() {
       <Navbar />                {/* ← เห็นทุกหน้า */}
       <main className="flex-1">
         <Routes>
-  <Route path="/" element={<Home />} />
-  <Route path="/movies" element={<Movie />} />
-  <Route path="/movies/:id" element={<MovieDetail />} />
-  <Route path="/about" element={<About />} />
-  <Route path="*" element={<NotFound />} />   {/* ← ดักทุกอย่างที่เหลือ ไว้ล่างสุด */}
-</Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/movies" element={<Movie />} />
+          <Route path="/movies/:id" element={<MovieDetail />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/movies/:id" element={<MovieCard title="Inception" year={2010} />} />
+          
+          <Route path="*" element={<NotFound />} />   {/* ← ดักทุกอย่างที่เหลือ ไว้ล่างสุด */}
+        </Routes>
       </main>
       <Footer />                {/* ← เห็นทุกหน้า */}
     </div>
