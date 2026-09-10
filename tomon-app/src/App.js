@@ -7,7 +7,7 @@ import About from './pages/About';
 import MovieDetail from './pages/MovieDetail';
 import NotFound from './pages/NotFound';
 import MovieCard from './components/MovieCard';
-import MovieGallery from './components/MovieGallery';
+//import MovieGallery from './components/MovieGallery';
 
 function App() {
   return (
