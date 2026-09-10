@@ -7,6 +7,7 @@ import About from './pages/About';
 import MovieDetail from './pages/MovieDetail';
 import NotFound from './pages/NotFound';
 import MovieCard from './components/MovieCard';
+import MovieGallery from './components/MovieGallery';
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
           <Route path="/movies/:id" element={<MovieDetail />} />
           <Route path="/about" element={<About />} />
           <Route path="/movies/:id" element={<MovieCard title="Inception" year={2010} />} />
-          
+
           <Route path="*" element={<NotFound />} />   {/* ← ดักทุกอย่างที่เหลือ ไว้ล่างสุด */}
         </Routes>
       </main>
